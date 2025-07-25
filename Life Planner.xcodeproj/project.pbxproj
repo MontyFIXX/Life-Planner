@@ -1,0 +1,830 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3022216C2DE7B20C001A8C4D /* LifePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022216B2DE7B20C001A8C4D /* LifePlannerApp.swift */; };
+		3022216E2DE7B20C001A8C4D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022216D2DE7B20C001A8C4D /* MainView.swift */; };
+		302221702DE7B20D001A8C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3022216F2DE7B20D001A8C4D /* Assets.xcassets */; };
+		302221732DE7B20D001A8C4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302221722DE7B20D001A8C4D /* Preview Assets.xcassets */; };
+		3022217D2DE7B20E001A8C4D /* Life_PlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022217C2DE7B20E001A8C4D /* Life_PlannerTests.swift */; };
+		302221872DE7B20E001A8C4D /* Life_PlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221862DE7B20E001A8C4D /* Life_PlannerUITests.swift */; };
+		302221892DE7B20E001A8C4D /* Life_PlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221882DE7B20E001A8C4D /* Life_PlannerUITestsLaunchTests.swift */; };
+		302221962DE7B620001A8C4D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221952DE7B620001A8C4D /* CalendarView.swift */; };
+		302221982DE7B63B001A8C4D /* TaskPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221972DE7B63B001A8C4D /* TaskPopupView.swift */; };
+		3022219A2DE7B64F001A8C4D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221992DE7B64F001A8C4D /* SideMenuView.swift */; };
+		3022219C2DE7B663001A8C4D /* HabitTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022219B2DE7B663001A8C4D /* HabitTrackerView.swift */; };
+		3022219E2DE7B674001A8C4D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022219D2DE7B674001A8C4D /* Task.swift */; };
+		302221A02DE7B67C001A8C4D /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022219F2DE7B67C001A8C4D /* Habit.swift */; };
+		302221A22DE7B68D001A8C4D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221A12DE7B68D001A8C4D /* AppData.swift */; };
+		302221A42DE7B6A7001A8C4D /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221A32DE7B6A7001A8C4D /* DataExtensions.swift */; };
+		302221A62DE7B6B8001A8C4D /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221A52DE7B6B8001A8C4D /* ColorExtensions.swift */; };
+		302221A82DE7B6CE001A8C4D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221A72DE7B6CE001A8C4D /* FirebaseManager.swift */; };
+		302221AA2DE7B6E8001A8C4D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221A92DE7B6E8001A8C4D /* AuthService.swift */; };
+		302221AC2DE7B833001A8C4D /* TaskSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221AB2DE7B833001A8C4D /* TaskSectionView.swift */; };
+		302221AE2DE7BC8B001A8C4D /* CalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221AD2DE7BC8B001A8C4D /* CalendarDayView.swift */; };
+		302221B02DE7BCBD001A8C4D /* TaskListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221AF2DE7BCBD001A8C4D /* TaskListPopupView.swift */; };
+		302221B22DE7BE0F001A8C4D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302221B12DE7BE0F001A8C4D /* SettingsView.swift */; };
+		30487B342DEB25A200850AA1 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B332DEB25A200850AA1 /* GoogleSignIn */; };
+		30487B362DEB25A200850AA1 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B352DEB25A200850AA1 /* GoogleSignInSwift */; };
+		30487B392DEB261500850AA1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B382DEB261500850AA1 /* FirebaseAuth */; };
+		30487B3B2DEB261500850AA1 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B3A2DEB261500850AA1 /* FirebaseAuthCombine-Community */; };
+		30487B3D2DEB261500850AA1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B3C2DEB261500850AA1 /* FirebaseFirestore */; };
+		30487B3F2DEB261500850AA1 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B3E2DEB261500850AA1 /* FirebaseFirestoreCombine-Community */; };
+		30487B412DEB261500850AA1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B402DEB261500850AA1 /* FirebaseFirestoreSwift */; };
+		30487B432DEB261500850AA1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B422DEB261500850AA1 /* FirebaseStorage */; };
+		30487B452DEB261500850AA1 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B442DEB261500850AA1 /* FirebaseStorageCombine-Community */; };
+		30487B482DEB2AB500850AA1 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B472DEB2AB500850AA1 /* FirebaseAppCheck */; };
+		30487B4A2DEB2AB900850AA1 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 30487B492DEB2AB900850AA1 /* FirebaseAppDistribution-Beta */; };
+		30A4F4B02DEAFC380006C4A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4F4AF2DEAFC380006C4A7 /* User.swift */; };
+		30A4F4B22DEAFC6E0006C4A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4F4B12DEAFC6E0006C4A7 /* LoginView.swift */; };
+		30A4F4B42DEAFC820006C4A7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4F4B32DEAFC820006C4A7 /* RegisterView.swift */; };
+		30A4F4B62DEAFCA70006C4A7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4F4B52DEAFCA70006C4A7 /* ImagePicker.swift */; };
+		30A4F4B82DEAFD3B0006C4A7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4F4B72DEAFD3B0006C4A7 /* ProfileView.swift */; };
+		30A4F4BA2DEAFED60006C4A7 /* FirestoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4F4B92DEAFED60006C4A7 /* FirestoreExtensions.swift */; };
+		30A513052DEB343D00B0EA7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A513042DEB343C00B0EA7D /* GoogleService-Info.plist */; };
+		30BA9AF72DE8DF3D0030570E /* BaseViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9AF62DE8DF3D0030570E /* BaseViewModifier.swift */; };
+		30BA9AF92DE8E83D0030570E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9AF82DE8E83D0030570E /* Language.swift */; };
+		30BA9AFB2DE908FC0030570E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9AFA2DE908FC0030570E /* Theme.swift */; };
+		30BA9AFD2DE909160030570E /* ThemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9AFC2DE909160030570E /* ThemeModifier.swift */; };
+		30BA9AFF2DE916FD0030570E /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9AFE2DE916FD0030570E /* AddHabitView.swift */; };
+		30BA9B012DE917100030570E /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9B002DE917100030570E /* HabitDetailView.swift */; };
+		30BA9B032DE917C20030570E /* HeartProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9B022DE917C20030570E /* HeartProgressView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		302221792DE7B20E001A8C4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 302221602DE7B20C001A8C4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 302221672DE7B20C001A8C4D;
+			remoteInfo = "Life Planner";
+		};
+		302221832DE7B20E001A8C4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 302221602DE7B20C001A8C4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 302221672DE7B20C001A8C4D;
+			remoteInfo = "Life Planner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		302221682DE7B20C001A8C4D /* Life Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3022216B2DE7B20C001A8C4D /* LifePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePlannerApp.swift; sourceTree = "<group>"; };
+		3022216D2DE7B20C001A8C4D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3022216F2DE7B20D001A8C4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		302221722DE7B20D001A8C4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		302221782DE7B20E001A8C4D /* Life PlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life PlannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3022217C2DE7B20E001A8C4D /* Life_PlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_PlannerTests.swift; sourceTree = "<group>"; };
+		302221822DE7B20E001A8C4D /* Life PlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life PlannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		302221862DE7B20E001A8C4D /* Life_PlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_PlannerUITests.swift; sourceTree = "<group>"; };
+		302221882DE7B20E001A8C4D /* Life_PlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_PlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		302221952DE7B620001A8C4D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		302221972DE7B63B001A8C4D /* TaskPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPopupView.swift; sourceTree = "<group>"; };
+		302221992DE7B64F001A8C4D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		3022219B2DE7B663001A8C4D /* HabitTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerView.swift; sourceTree = "<group>"; };
+		3022219D2DE7B674001A8C4D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		3022219F2DE7B67C001A8C4D /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		302221A12DE7B68D001A8C4D /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		302221A32DE7B6A7001A8C4D /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		302221A52DE7B6B8001A8C4D /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		302221A72DE7B6CE001A8C4D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		302221A92DE7B6E8001A8C4D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		302221AB2DE7B833001A8C4D /* TaskSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSectionView.swift; sourceTree = "<group>"; };
+		302221AD2DE7BC8B001A8C4D /* CalendarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
+		302221AF2DE7BCBD001A8C4D /* TaskListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPopupView.swift; sourceTree = "<group>"; };
+		302221B12DE7BE0F001A8C4D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30A4F4AF2DEAFC380006C4A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		30A4F4B12DEAFC6E0006C4A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		30A4F4B32DEAFC820006C4A7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		30A4F4B52DEAFCA70006C4A7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		30A4F4B72DEAFD3B0006C4A7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		30A4F4B92DEAFED60006C4A7 /* FirestoreExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreExtensions.swift; sourceTree = "<group>"; };
+		30A513042DEB343C00B0EA7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30A513062DEB35C000B0EA7D /* Life-Planner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Life-Planner-Info.plist"; sourceTree = SOURCE_ROOT; };
+		30BA9AF62DE8DF3D0030570E /* BaseViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModifier.swift; sourceTree = "<group>"; };
+		30BA9AF82DE8E83D0030570E /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		30BA9AFA2DE908FC0030570E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		30BA9AFC2DE909160030570E /* ThemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModifier.swift; sourceTree = "<group>"; };
+		30BA9AFE2DE916FD0030570E /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		30BA9B002DE917100030570E /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		30BA9B022DE917C20030570E /* HeartProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartProgressView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		302221652DE7B20C001A8C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30487B342DEB25A200850AA1 /* GoogleSignIn in Frameworks */,
+				30487B392DEB261500850AA1 /* FirebaseAuth in Frameworks */,
+				30487B362DEB25A200850AA1 /* GoogleSignInSwift in Frameworks */,
+				30487B412DEB261500850AA1 /* FirebaseFirestoreSwift in Frameworks */,
+				30487B3F2DEB261500850AA1 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				30487B432DEB261500850AA1 /* FirebaseStorage in Frameworks */,
+				30487B3D2DEB261500850AA1 /* FirebaseFirestore in Frameworks */,
+				30487B452DEB261500850AA1 /* FirebaseStorageCombine-Community in Frameworks */,
+				30487B482DEB2AB500850AA1 /* FirebaseAppCheck in Frameworks */,
+				30487B4A2DEB2AB900850AA1 /* FirebaseAppDistribution-Beta in Frameworks */,
+				30487B3B2DEB261500850AA1 /* FirebaseAuthCombine-Community in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		302221752DE7B20E001A8C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3022217F2DE7B20E001A8C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3022215F2DE7B20C001A8C4D = {
+			isa = PBXGroup;
+			children = (
+				30BA9B022DE917C20030570E /* HeartProgressView.swift */,
+				30BA9AFA2DE908FC0030570E /* Theme.swift */,
+				30BA9AFC2DE909160030570E /* ThemeModifier.swift */,
+				30BA9AF82DE8E83D0030570E /* Language.swift */,
+				30A4F4B72DEAFD3B0006C4A7 /* ProfileView.swift */,
+				30BA9AF62DE8DF3D0030570E /* BaseViewModifier.swift */,
+				3022216A2DE7B20C001A8C4D /* Life Planner */,
+				3022217B2DE7B20E001A8C4D /* Life PlannerTests */,
+				302221852DE7B20E001A8C4D /* Life PlannerUITests */,
+				302221692DE7B20C001A8C4D /* Products */,
+				30487B462DEB263000850AA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		302221692DE7B20C001A8C4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				302221682DE7B20C001A8C4D /* Life Planner.app */,
+				302221782DE7B20E001A8C4D /* Life PlannerTests.xctest */,
+				302221822DE7B20E001A8C4D /* Life PlannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3022216A2DE7B20C001A8C4D /* Life Planner */ = {
+			isa = PBXGroup;
+			children = (
+				30A513062DEB35C000B0EA7D /* Life-Planner-Info.plist */,
+				30A513042DEB343C00B0EA7D /* GoogleService-Info.plist */,
+				3022216B2DE7B20C001A8C4D /* LifePlannerApp.swift */,
+				3022216D2DE7B20C001A8C4D /* MainView.swift */,
+				302221952DE7B620001A8C4D /* CalendarView.swift */,
+				302221AF2DE7BCBD001A8C4D /* TaskListPopupView.swift */,
+				302221AD2DE7BC8B001A8C4D /* CalendarDayView.swift */,
+				302221972DE7B63B001A8C4D /* TaskPopupView.swift */,
+				30BA9AFE2DE916FD0030570E /* AddHabitView.swift */,
+				30BA9B002DE917100030570E /* HabitDetailView.swift */,
+				302221AB2DE7B833001A8C4D /* TaskSectionView.swift */,
+				302221992DE7B64F001A8C4D /* SideMenuView.swift */,
+				302221B12DE7BE0F001A8C4D /* SettingsView.swift */,
+				3022219B2DE7B663001A8C4D /* HabitTrackerView.swift */,
+				3022219D2DE7B674001A8C4D /* Task.swift */,
+				3022219F2DE7B67C001A8C4D /* Habit.swift */,
+				302221A12DE7B68D001A8C4D /* AppData.swift */,
+				30A4F4B92DEAFED60006C4A7 /* FirestoreExtensions.swift */,
+				302221A32DE7B6A7001A8C4D /* DataExtensions.swift */,
+				302221A52DE7B6B8001A8C4D /* ColorExtensions.swift */,
+				302221A72DE7B6CE001A8C4D /* FirebaseManager.swift */,
+				30A4F4AF2DEAFC380006C4A7 /* User.swift */,
+				302221A92DE7B6E8001A8C4D /* AuthService.swift */,
+				30A4F4B12DEAFC6E0006C4A7 /* LoginView.swift */,
+				30A4F4B32DEAFC820006C4A7 /* RegisterView.swift */,
+				30A4F4B52DEAFCA70006C4A7 /* ImagePicker.swift */,
+				3022216F2DE7B20D001A8C4D /* Assets.xcassets */,
+				302221712DE7B20D001A8C4D /* Preview Content */,
+			);
+			path = "Life Planner";
+			sourceTree = "<group>";
+		};
+		302221712DE7B20D001A8C4D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				302221722DE7B20D001A8C4D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3022217B2DE7B20E001A8C4D /* Life PlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3022217C2DE7B20E001A8C4D /* Life_PlannerTests.swift */,
+			);
+			path = "Life PlannerTests";
+			sourceTree = "<group>";
+		};
+		302221852DE7B20E001A8C4D /* Life PlannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				302221862DE7B20E001A8C4D /* Life_PlannerUITests.swift */,
+				302221882DE7B20E001A8C4D /* Life_PlannerUITestsLaunchTests.swift */,
+			);
+			path = "Life PlannerUITests";
+			sourceTree = "<group>";
+		};
+		30487B462DEB263000850AA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		302221672DE7B20C001A8C4D /* Life Planner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3022218C2DE7B20E001A8C4D /* Build configuration list for PBXNativeTarget "Life Planner" */;
+			buildPhases = (
+				302221642DE7B20C001A8C4D /* Sources */,
+				302221652DE7B20C001A8C4D /* Frameworks */,
+				302221662DE7B20C001A8C4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Life Planner";
+			packageProductDependencies = (
+				30487B332DEB25A200850AA1 /* GoogleSignIn */,
+				30487B352DEB25A200850AA1 /* GoogleSignInSwift */,
+				30487B382DEB261500850AA1 /* FirebaseAuth */,
+				30487B3A2DEB261500850AA1 /* FirebaseAuthCombine-Community */,
+				30487B3C2DEB261500850AA1 /* FirebaseFirestore */,
+				30487B3E2DEB261500850AA1 /* FirebaseFirestoreCombine-Community */,
+				30487B402DEB261500850AA1 /* FirebaseFirestoreSwift */,
+				30487B422DEB261500850AA1 /* FirebaseStorage */,
+				30487B442DEB261500850AA1 /* FirebaseStorageCombine-Community */,
+				30487B472DEB2AB500850AA1 /* FirebaseAppCheck */,
+				30487B492DEB2AB900850AA1 /* FirebaseAppDistribution-Beta */,
+			);
+			productName = "Life Planner";
+			productReference = 302221682DE7B20C001A8C4D /* Life Planner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		302221772DE7B20E001A8C4D /* Life PlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3022218F2DE7B20E001A8C4D /* Build configuration list for PBXNativeTarget "Life PlannerTests" */;
+			buildPhases = (
+				302221742DE7B20E001A8C4D /* Sources */,
+				302221752DE7B20E001A8C4D /* Frameworks */,
+				302221762DE7B20E001A8C4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3022217A2DE7B20E001A8C4D /* PBXTargetDependency */,
+			);
+			name = "Life PlannerTests";
+			productName = "Life PlannerTests";
+			productReference = 302221782DE7B20E001A8C4D /* Life PlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		302221812DE7B20E001A8C4D /* Life PlannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 302221922DE7B20E001A8C4D /* Build configuration list for PBXNativeTarget "Life PlannerUITests" */;
+			buildPhases = (
+				3022217E2DE7B20E001A8C4D /* Sources */,
+				3022217F2DE7B20E001A8C4D /* Frameworks */,
+				302221802DE7B20E001A8C4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				302221842DE7B20E001A8C4D /* PBXTargetDependency */,
+			);
+			name = "Life PlannerUITests";
+			productName = "Life PlannerUITests";
+			productReference = 302221822DE7B20E001A8C4D /* Life PlannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		302221602DE7B20C001A8C4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					302221672DE7B20C001A8C4D = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					302221772DE7B20E001A8C4D = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 302221672DE7B20C001A8C4D;
+					};
+					302221812DE7B20E001A8C4D = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 302221672DE7B20C001A8C4D;
+					};
+				};
+			};
+			buildConfigurationList = 302221632DE7B20C001A8C4D /* Build configuration list for PBXProject "Life Planner" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3022215F2DE7B20C001A8C4D;
+			packageReferences = (
+				30487B322DEB25A200850AA1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 302221692DE7B20C001A8C4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				302221672DE7B20C001A8C4D /* Life Planner */,
+				302221772DE7B20E001A8C4D /* Life PlannerTests */,
+				302221812DE7B20E001A8C4D /* Life PlannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		302221662DE7B20C001A8C4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302221732DE7B20D001A8C4D /* Preview Assets.xcassets in Resources */,
+				30A513052DEB343D00B0EA7D /* GoogleService-Info.plist in Resources */,
+				302221702DE7B20D001A8C4D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		302221762DE7B20E001A8C4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		302221802DE7B20E001A8C4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		302221642DE7B20C001A8C4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302221B02DE7BCBD001A8C4D /* TaskListPopupView.swift in Sources */,
+				302221A82DE7B6CE001A8C4D /* FirebaseManager.swift in Sources */,
+				302221A62DE7B6B8001A8C4D /* ColorExtensions.swift in Sources */,
+				30A4F4B02DEAFC380006C4A7 /* User.swift in Sources */,
+				3022219C2DE7B663001A8C4D /* HabitTrackerView.swift in Sources */,
+				302221982DE7B63B001A8C4D /* TaskPopupView.swift in Sources */,
+				30BA9AF92DE8E83D0030570E /* Language.swift in Sources */,
+				302221B22DE7BE0F001A8C4D /* SettingsView.swift in Sources */,
+				3022216E2DE7B20C001A8C4D /* MainView.swift in Sources */,
+				30A4F4B42DEAFC820006C4A7 /* RegisterView.swift in Sources */,
+				302221A42DE7B6A7001A8C4D /* DataExtensions.swift in Sources */,
+				30A4F4B82DEAFD3B0006C4A7 /* ProfileView.swift in Sources */,
+				30A4F4B22DEAFC6E0006C4A7 /* LoginView.swift in Sources */,
+				30A4F4BA2DEAFED60006C4A7 /* FirestoreExtensions.swift in Sources */,
+				302221AA2DE7B6E8001A8C4D /* AuthService.swift in Sources */,
+				30BA9AFD2DE909160030570E /* ThemeModifier.swift in Sources */,
+				3022219A2DE7B64F001A8C4D /* SideMenuView.swift in Sources */,
+				30BA9AF72DE8DF3D0030570E /* BaseViewModifier.swift in Sources */,
+				3022216C2DE7B20C001A8C4D /* LifePlannerApp.swift in Sources */,
+				30A4F4B62DEAFCA70006C4A7 /* ImagePicker.swift in Sources */,
+				30BA9B032DE917C20030570E /* HeartProgressView.swift in Sources */,
+				302221AE2DE7BC8B001A8C4D /* CalendarDayView.swift in Sources */,
+				30BA9B012DE917100030570E /* HabitDetailView.swift in Sources */,
+				30BA9AFF2DE916FD0030570E /* AddHabitView.swift in Sources */,
+				302221AC2DE7B833001A8C4D /* TaskSectionView.swift in Sources */,
+				3022219E2DE7B674001A8C4D /* Task.swift in Sources */,
+				302221A02DE7B67C001A8C4D /* Habit.swift in Sources */,
+				30BA9AFB2DE908FC0030570E /* Theme.swift in Sources */,
+				302221962DE7B620001A8C4D /* CalendarView.swift in Sources */,
+				302221A22DE7B68D001A8C4D /* AppData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		302221742DE7B20E001A8C4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3022217D2DE7B20E001A8C4D /* Life_PlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3022217E2DE7B20E001A8C4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302221872DE7B20E001A8C4D /* Life_PlannerUITests.swift in Sources */,
+				302221892DE7B20E001A8C4D /* Life_PlannerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3022217A2DE7B20E001A8C4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 302221672DE7B20C001A8C4D /* Life Planner */;
+			targetProxy = 302221792DE7B20E001A8C4D /* PBXContainerItemProxy */;
+		};
+		302221842DE7B20E001A8C4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 302221672DE7B20C001A8C4D /* Life Planner */;
+			targetProxy = 302221832DE7B20E001A8C4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3022218A2DE7B20E001A8C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3022218B2DE7B20E001A8C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3022218D2DE7B20E001A8C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Life Planner/Life Planner.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Life Planner/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Life-Planner-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MontyFixx.Life-Planner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3022218E2DE7B20E001A8C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Life Planner/Life Planner.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Life Planner/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Life-Planner-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MontyFixx.Life-Planner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		302221902DE7B20E001A8C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MontyFixx.Life-PlannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Planner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Life Planner";
+			};
+			name = Debug;
+		};
+		302221912DE7B20E001A8C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MontyFixx.Life-PlannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Planner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Life Planner";
+			};
+			name = Release;
+		};
+		302221932DE7B20E001A8C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MontyFixx.Life-PlannerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Life Planner";
+			};
+			name = Debug;
+		};
+		302221942DE7B20E001A8C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MontyFixx.Life-PlannerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Life Planner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		302221632DE7B20C001A8C4D /* Build configuration list for PBXProject "Life Planner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3022218A2DE7B20E001A8C4D /* Debug */,
+				3022218B2DE7B20E001A8C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3022218C2DE7B20E001A8C4D /* Build configuration list for PBXNativeTarget "Life Planner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3022218D2DE7B20E001A8C4D /* Debug */,
+				3022218E2DE7B20E001A8C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3022218F2DE7B20E001A8C4D /* Build configuration list for PBXNativeTarget "Life PlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				302221902DE7B20E001A8C4D /* Debug */,
+				302221912DE7B20E001A8C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		302221922DE7B20E001A8C4D /* Build configuration list for PBXNativeTarget "Life PlannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				302221932DE7B20E001A8C4D /* Debug */,
+				302221942DE7B20E001A8C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30487B322DEB25A200850AA1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.2.4;
+			};
+		};
+		30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30487B332DEB25A200850AA1 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B322DEB25A200850AA1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		30487B352DEB25A200850AA1 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B322DEB25A200850AA1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		30487B382DEB261500850AA1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		30487B3A2DEB261500850AA1 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		30487B3C2DEB261500850AA1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		30487B3E2DEB261500850AA1 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		30487B402DEB261500850AA1 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		30487B422DEB261500850AA1 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		30487B442DEB261500850AA1 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		30487B472DEB2AB500850AA1 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		30487B492DEB2AB900850AA1 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30487B372DEB261500850AA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 302221602DE7B20C001A8C4D /* Project object */;
+}
