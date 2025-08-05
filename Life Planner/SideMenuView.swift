@@ -70,8 +70,9 @@ struct SideMenuView: View {
                     }
                     
                     NavigationLink {
-                        Text("Grupy")
-                    } label: {
+                   GroupsListView()
+                   .environmentObject(appData)     // ← TU
+                     } label: {
                         HStack {
                             Image(systemName: "person.2")
                                 .frame(width: 24)

@@ -7,13 +7,19 @@ import FirebaseAuth
 class AppData: ObservableObject {
     static let shared = AppData()
     
+    // MARK: - Published Properties
     @Published var tasks: [Task] = []
     @Published var habits: [Habit] = []
+    @Published var groups: [Group] = []
     @Published var selectedDate = Date()
     
-    private var db = Firestore.firestore()
+    // MARK: - Firestore & Listeners
+    private let db = Firestore.firestore()
     private var tasksListener: ListenerRegistration?
     private var habitsListener: ListenerRegistration?
+    private var groupsListener: ListenerRegistration?
+    
+    // MARK: - Combine
     private var cancellables = Set<AnyCancellable>()
     
     private init() {
@@ -21,13 +27,17 @@ class AppData: ObservableObject {
         setupLocalPersistence()
     }
     
+    // MARK: - Authentication Handling
+    
     private func setupAuthListener() {
         Auth.auth().addStateDidChangeListener { [weak self] (_, user) in
             guard let self = self else { return }
             
+            // Usuń wszystkie snapshot listnery i wyczyść dane
             self.removeListeners()
             self.clearData()
             
+            // Jeśli zalogowany — podłącz nowe listenery
             if let userId = user?.uid {
                 self.setupListeners(userId: userId)
             }
@@ -38,7 +48,7 @@ class AppData: ObservableObject {
         // Tasks listener
         tasksListener = db.collection("tasks")
             .whereField("userID", isEqualTo: userId)
-            .addSnapshotListener { [weak self] (querySnapshot, error) in
+            .addSnapshotListener { [weak self] (snapshot, error) in
                 guard let self = self else { return }
                 
                 if let error = error {
@@ -46,20 +56,19 @@ class AppData: ObservableObject {
                     return
                 }
                 
-                self.tasks = querySnapshot?.documents.compactMap { document in
-                    var data = document.data()
-                    data["id"] = document.documentID
+                self.tasks = snapshot?.documents.compactMap { doc in
+                    var data = doc.data()
+                    data["id"] = doc.documentID
                     return Task(dictionary: data)
                 } ?? []
                 
-                // Save to local cache
                 self.saveTasksToLocalCache()
             }
         
         // Habits listener
         habitsListener = db.collection("habits")
             .whereField("userID", isEqualTo: userId)
-            .addSnapshotListener { [weak self] (querySnapshot, error) in
+            .addSnapshotListener { [weak self] (snapshot, error) in
                 guard let self = self else { return }
                 
                 if let error = error {
@@ -67,15 +76,37 @@ class AppData: ObservableObject {
                     return
                 }
                 
-                self.habits = querySnapshot?.documents.compactMap { document in
-                    var data = document.data()
-                    data["id"] = document.documentID
+                self.habits = snapshot?.documents.compactMap { doc in
+                    var data = doc.data()
+                    data["id"] = doc.documentID
                     return Habit(dictionary: data)
                 } ?? []
                 
-                // Save to local cache
                 self.saveHabitsToLocalCache()
             }
+        
+        groupsListener = db.collection("groups")
+            .whereField("members", arrayContains: userId)
+            .addSnapshotListener { [weak self] snapshot, error in
+                guard let self = self else { return }
+
+                if let error = error {
+                    print("Error fetching groups: \(error.localizedDescription)")
+                    return
+                }
+
+                self.groups = snapshot?.documents.compactMap { document in
+                    do {
+                        return try document.data(as: Group.self)
+                    } catch {
+                        print("Decoding Group failed:", error)
+                        return nil
+                    }
+                } ?? []
+
+                self.saveGroupsToLocalCache()
+            }
+
     }
     
     // MARK: - Public Methods
@@ -84,7 +115,6 @@ class AppData: ObservableObject {
         FirebaseManager.shared.saveTask(task) { [weak self] error in
             if let error = error {
                 print("Error saving task: \(error.localizedDescription)")
-                // Fallback to local storage if Firebase fails
                 self?.saveTasksToLocalCache()
             }
         }
@@ -94,12 +124,12 @@ class AppData: ObservableObject {
         FirebaseManager.shared.saveHabit(habit) { [weak self] error in
             if let error = error {
                 print("Error saving habit: \(error.localizedDescription)")
-                // Fallback to local storage if Firebase fails
                 self?.saveHabitsToLocalCache()
             }
         }
     }
     
+    /// Ładuje dane z lokalnej pamięci, a potem fetchuje z Firestore
     func loadData() {
         loadLocalCache()
         
@@ -127,23 +157,26 @@ class AppData: ObservableObject {
     func clearData() {
         tasks = []
         habits = []
+        groups = []
         removeListeners()
         clearLocalCache()
     }
     
-    // MARK: - Private Methods
+    // MARK: - Listener Cleanup
     
     private func removeListeners() {
         tasksListener?.remove()
         habitsListener?.remove()
+        groupsListener?.remove()
+        
         tasksListener = nil
         habitsListener = nil
+        groupsListener = nil
     }
     
     // MARK: - Local Cache Management
     
     private func setupLocalPersistence() {
-        // Load local cache on init
         loadLocalCache()
     }
     
@@ -165,22 +198,38 @@ class AppData: ObservableObject {
         }
     }
     
+    private func saveGroupsToLocalCache() {
+        do {
+            let data = try JSONEncoder().encode(groups)
+            UserDefaults.standard.set(data, forKey: "localGroupsCache")
+        } catch {
+            print("Error saving groups to local cache: \(error)")
+        }
+    }
+    
     private func loadLocalCache() {
-        // Load tasks
+        // Tasks
         if let data = UserDefaults.standard.data(forKey: "localTasksCache"),
-           let decodedTasks = try? JSONDecoder().decode([Task].self, from: data) {
-            tasks = decodedTasks
+           let decoded = try? JSONDecoder().decode([Task].self, from: data) {
+            tasks = decoded
         }
         
-        // Load habits
+        // Habits
         if let data = UserDefaults.standard.data(forKey: "localHabitsCache"),
-           let decodedHabits = try? JSONDecoder().decode([Habit].self, from: data) {
-            habits = decodedHabits
+           let decoded = try? JSONDecoder().decode([Habit].self, from: data) {
+            habits = decoded
+        }
+        
+        // Groups
+        if let data = UserDefaults.standard.data(forKey: "localGroupsCache"),
+           let decoded = try? JSONDecoder().decode([Group].self, from: data) {
+            groups = decoded
         }
     }
     
     private func clearLocalCache() {
         UserDefaults.standard.removeObject(forKey: "localTasksCache")
         UserDefaults.standard.removeObject(forKey: "localHabitsCache")
+        UserDefaults.standard.removeObject(forKey: "localGroupsCache")
     }
 }

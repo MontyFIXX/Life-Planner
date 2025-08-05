@@ -54,6 +54,16 @@
 		30BA9AFF2DE916FD0030570E /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9AFE2DE916FD0030570E /* AddHabitView.swift */; };
 		30BA9B012DE917100030570E /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9B002DE917100030570E /* HabitDetailView.swift */; };
 		30BA9B032DE917C20030570E /* HeartProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA9B022DE917C20030570E /* HeartProgressView.swift */; };
+		30BB3A9E2E34FE9200482BC5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3A9D2E34FE9200482BC5 /* Group.swift */; };
+		30BB3AA02E34FEB800482BC5 /* GroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3A9F2E34FEB800482BC5 /* GroupService.swift */; };
+		30BB3AA22E34FEEE00482BC5 /* GroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AA12E34FEEE00482BC5 /* GroupListViewModel.swift */; };
+		30BB3AA42E34FF2200482BC5 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AA32E34FF2200482BC5 /* CreateGroupViewModel.swift */; };
+		30BB3AA62E34FF4700482BC5 /* GroupDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AA52E34FF4700482BC5 /* GroupDetailViewModel.swift */; };
+		30BB3AA82E34FF6F00482BC5 /* IntervalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AA72E34FF6F00482BC5 /* IntervalHelper.swift */; };
+		30BB3AAA2E34FF9000482BC5 /* GroupsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AA92E34FF9000482BC5 /* GroupsListView.swift */; };
+		30BB3AAC2E34FFB100482BC5 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AAB2E34FFB100482BC5 /* CreateGroupView.swift */; };
+		30BB3AAE2E34FFCD00482BC5 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AAD2E34FFCD00482BC5 /* GroupDetailView.swift */; };
+		30BB3AB02E3509E700482BC5 /* JoinGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB3AAF2E3509E700482BC5 /* JoinGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +124,16 @@
 		30BA9AFE2DE916FD0030570E /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		30BA9B002DE917100030570E /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 		30BA9B022DE917C20030570E /* HeartProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartProgressView.swift; sourceTree = "<group>"; };
+		30BB3A9D2E34FE9200482BC5 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		30BB3A9F2E34FEB800482BC5 /* GroupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupService.swift; sourceTree = "<group>"; };
+		30BB3AA12E34FEEE00482BC5 /* GroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewModel.swift; sourceTree = "<group>"; };
+		30BB3AA32E34FF2200482BC5 /* CreateGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewModel.swift; sourceTree = "<group>"; };
+		30BB3AA52E34FF4700482BC5 /* GroupDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewModel.swift; sourceTree = "<group>"; };
+		30BB3AA72E34FF6F00482BC5 /* IntervalHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalHelper.swift; sourceTree = "<group>"; };
+		30BB3AA92E34FF9000482BC5 /* GroupsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsListView.swift; sourceTree = "<group>"; };
+		30BB3AAB2E34FFB100482BC5 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
+		30BB3AAD2E34FFCD00482BC5 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		30BB3AAF2E3509E700482BC5 /* JoinGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +224,16 @@
 				302221A52DE7B6B8001A8C4D /* ColorExtensions.swift */,
 				302221A72DE7B6CE001A8C4D /* FirebaseManager.swift */,
 				30A4F4AF2DEAFC380006C4A7 /* User.swift */,
+				30BB3A9D2E34FE9200482BC5 /* Group.swift */,
+				30BB3A9F2E34FEB800482BC5 /* GroupService.swift */,
+				30BB3AA12E34FEEE00482BC5 /* GroupListViewModel.swift */,
+				30BB3AA32E34FF2200482BC5 /* CreateGroupViewModel.swift */,
+				30BB3AA52E34FF4700482BC5 /* GroupDetailViewModel.swift */,
+				30BB3AA72E34FF6F00482BC5 /* IntervalHelper.swift */,
+				30BB3AA92E34FF9000482BC5 /* GroupsListView.swift */,
+				30BB3AAB2E34FFB100482BC5 /* CreateGroupView.swift */,
+				30BB3AAF2E3509E700482BC5 /* JoinGroupView.swift */,
+				30BB3AAD2E34FFCD00482BC5 /* GroupDetailView.swift */,
 				302221A92DE7B6E8001A8C4D /* AuthService.swift */,
 				30A4F4B12DEAFC6E0006C4A7 /* LoginView.swift */,
 				30A4F4B32DEAFC820006C4A7 /* RegisterView.swift */,
@@ -394,22 +424,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BB3AA82E34FF6F00482BC5 /* IntervalHelper.swift in Sources */,
 				302221B02DE7BCBD001A8C4D /* TaskListPopupView.swift in Sources */,
+				30BB3AA22E34FEEE00482BC5 /* GroupListViewModel.swift in Sources */,
 				302221A82DE7B6CE001A8C4D /* FirebaseManager.swift in Sources */,
 				302221A62DE7B6B8001A8C4D /* ColorExtensions.swift in Sources */,
 				30A4F4B02DEAFC380006C4A7 /* User.swift in Sources */,
+				30BB3AB02E3509E700482BC5 /* JoinGroupView.swift in Sources */,
 				3022219C2DE7B663001A8C4D /* HabitTrackerView.swift in Sources */,
 				302221982DE7B63B001A8C4D /* TaskPopupView.swift in Sources */,
 				30BA9AF92DE8E83D0030570E /* Language.swift in Sources */,
 				302221B22DE7BE0F001A8C4D /* SettingsView.swift in Sources */,
 				3022216E2DE7B20C001A8C4D /* MainView.swift in Sources */,
+				30BB3AAE2E34FFCD00482BC5 /* GroupDetailView.swift in Sources */,
 				30A4F4B42DEAFC820006C4A7 /* RegisterView.swift in Sources */,
 				302221A42DE7B6A7001A8C4D /* DataExtensions.swift in Sources */,
+				30BB3AAA2E34FF9000482BC5 /* GroupsListView.swift in Sources */,
+				30BB3AA02E34FEB800482BC5 /* GroupService.swift in Sources */,
 				30A4F4B82DEAFD3B0006C4A7 /* ProfileView.swift in Sources */,
+				30BB3AA62E34FF4700482BC5 /* GroupDetailViewModel.swift in Sources */,
 				30A4F4B22DEAFC6E0006C4A7 /* LoginView.swift in Sources */,
 				30A4F4BA2DEAFED60006C4A7 /* FirestoreExtensions.swift in Sources */,
 				302221AA2DE7B6E8001A8C4D /* AuthService.swift in Sources */,
 				30BA9AFD2DE909160030570E /* ThemeModifier.swift in Sources */,
+				30BB3AA42E34FF2200482BC5 /* CreateGroupViewModel.swift in Sources */,
 				3022219A2DE7B64F001A8C4D /* SideMenuView.swift in Sources */,
 				30BA9AF72DE8DF3D0030570E /* BaseViewModifier.swift in Sources */,
 				3022216C2DE7B20C001A8C4D /* LifePlannerApp.swift in Sources */,
@@ -420,8 +458,10 @@
 				30BA9AFF2DE916FD0030570E /* AddHabitView.swift in Sources */,
 				302221AC2DE7B833001A8C4D /* TaskSectionView.swift in Sources */,
 				3022219E2DE7B674001A8C4D /* Task.swift in Sources */,
+				30BB3AAC2E34FFB100482BC5 /* CreateGroupView.swift in Sources */,
 				302221A02DE7B67C001A8C4D /* Habit.swift in Sources */,
 				30BA9AFB2DE908FC0030570E /* Theme.swift in Sources */,
+				30BB3A9E2E34FE9200482BC5 /* Group.swift in Sources */,
 				302221962DE7B620001A8C4D /* CalendarView.swift in Sources */,
 				302221A22DE7B68D001A8C4D /* AppData.swift in Sources */,
 			);

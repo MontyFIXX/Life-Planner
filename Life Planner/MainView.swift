@@ -98,7 +98,8 @@ struct MainView: View {
                                 if let index = appData.tasks.firstIndex(where: { $0.id == task.id }) {
                                     var updatedTask = appData.tasks[index]
                                     updatedTask.isCompleted.toggle()
-                                    appData.saveTask(updatedTask)
+                                    appData.tasks[index] = updatedTask        // ⬅️ Przypisujemy zmienione zadanie z powrotem
+                                    appData.saveTask(updatedTask)             // Zapisujemy do Firestore / lokalnie
                                 }
                             },
                             language: language
